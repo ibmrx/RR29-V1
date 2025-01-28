@@ -36,7 +36,7 @@ Ideal for ethical hackers, cybersecurity students, and professionals who require
 
 ### **KALI Installation:**
 - **Requirement:** Python.
-- **Command:**
+- **Commands:**
   - `git clone https://github.com/ibmrx/RR29-V1.git`
   - `python RR29-V1.py`
 
