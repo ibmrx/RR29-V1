@@ -28,7 +28,7 @@ def display_logo():
       ⢂⡊⠊⠇⢫⣑⣭⠾⢻⠾⡿⢟⠞⠷⣥⣉⡣⠣⠃⡑⢔       Why me?                                                                       
       ⠐⢱⣦⠐⢿⣿⣿⣴⡄⠑⠘⠈⢠⣦⣿⡿⣯⠂⣠⡎⠆       Instagram! @0.1exe
       ⠄ ⢈⠿⣌⢄⣀⣀⠄⠄⠠⠖⠄⠄⠄⡀⣀⠄⣰⠟⡑       Telegram: @0.1exe                                                                                     
-      ⠄⠄⠑⡹⢧⡈⢉⠙⠛⠛⠛⠛⠛⢉⠉⢁⢴⠋ ⠜⠄       For tool recommendations, please DM me.
+      ⠄⠄⠑⡹⢧⡈⢉⠙⠛⠛⠛⠛⠛⢉⠉⢁⢴⠋ ⠜⠄       For tools recommendation, please DM me.
       ⠄⠄⠄⠈⠪⣳⡦⡯⣿⡄⠄⢴⣯⣖⢵⡞⡑ ⠄⠄⠄       Released date: 1/28/25 - By: Mr. RedRaccoon </>
       ⠄⠄⠄⠄⠄⠄⠻⢾⣿⡅⠄⣽⣿⠾ ⠄⠄⠄⠄⠄⠄
 
