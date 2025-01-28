@@ -1,14 +1,12 @@
 import os
 import subprocess
 
-# Define color codes
 RED = '\033[0;31m'
 GREEN = '\033[0;32m'
 YELLOW = '\033[0;33m'
 CYAN = '\033[36m'
 RESET = '\033[0m'
 
-# Clear the terminal screen
 def clear_screen():
     # For Linux and MacOS
     if os.name == 'posix':
@@ -17,7 +15,6 @@ def clear_screen():
     else:
         os.system('cls')
 
-# Display the logo
 def display_logo():
     logo = f"""
     {GREEN}
@@ -62,11 +59,9 @@ def display_logo():
     print(logo)
 
 
-# Function to clone and launch tools
 def clone_tool(tool_name, repo_url):
     tool_path = f"/home/kali/{tool_name}"
     
-    # Check if the tool directory already exists
     if not os.path.exists(tool_path):
         print(f"Cloning {tool_name} from {repo_url}...")
         subprocess.run(["git", "clone", repo_url, tool_path])
@@ -77,15 +72,12 @@ def clone_tool(tool_name, repo_url):
 def select_tool(tool_name):
     tool_path = f"/home/kali/{tool_name}"
 
-    # Check if the tool's directory exists
     if not os.path.exists(tool_path):
         print(f"Error: The directory for {tool_name} does not exist: {tool_path}")
         return
 
-    # List files in the tool directory
     files = os.listdir(tool_path)
 
-    # Search for Python (.py) or Bash (.sh) script
     script_to_run = None
     for file in files:
         if file.endswith(".py"):
@@ -108,7 +100,6 @@ def select_tool(tool_name):
         print(f"No executable Python or Bash script found in {tool_path}.")
         
 
-# Define tools with their corresponding URLs
 tools_dict = {
     "OSINT Tools": {
         "Full-OSINT Ways": "https://github.com/airborne-commando/OPSEC-OSINT-Tools",
@@ -163,7 +154,6 @@ tools_dict = {
     }
 }
 
-# Function to show categories
 def show_categories():
     print(f"{GREEN}Select a category:{RESET}")
     categories = {
@@ -197,7 +187,6 @@ def show_categories():
         print(f"{RED}Blind? Invalid choice!{RESET}"),
         show_categories()
 
-# Function to select a tool from a category
 def select_tool(category):
     print(f"\n{GREEN}{category}:{RESET}\n")
     tools = tools_dict[category]
@@ -210,12 +199,11 @@ def select_tool(category):
         tool_name = list(tools.keys())[int(tool_choice) - 1]
         clone_tool(tool_name, tools[tool_name])
     elif tool_choice == "0":
-        show_categories()  # Go back to the category selection
+        show_categories()  
     else:
         print(f"{GREEN}Blind? Invalid choice!{RESET}")
         select_tool(category)
 
-# Main execution
 if __name__ == "__main__":
     clear_screen()
     display_logo()
